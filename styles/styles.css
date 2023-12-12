@@ -120,14 +120,43 @@ header {
     }
 }
 
-/*Armado del MAIN*/
-
+        /*Armado del MAIN*/
+/*Hero Section*/
+.hero{
+    height: calc(100vh - 80px);
+    background-image: url(../imagenes/fondo_del_hero.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__text{
+   color: white;
+   font-size: 0.8rem;
+   text-align: center;
+   background-color: rgba(128, 128, 128, 0.5);
+   border: solid 2px black;
+   padding: 15px;
+   border-radius: 20px;
+}
+.hero__text strong{
+    font-size: 1.5rem;
+    color: rgb(138, 238, 238);
+}
+@media (max-width: 768px){
+    .hero__text{
+        font-size: 0.6rem;
+    }
+    .hero__text strong{
+        font-size: 1rem;
+    }
+}
 
 
 /*para que no se rompa el main*/
-.hero__img {
-    width: 100%;
-}
 
 iframe {
     width: 100%;
@@ -279,7 +308,7 @@ footer .social__link:nth-of-type(3){
 }
 
 /*Armado del Formulario*/
-.body__footer{
+.body__form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,6 +319,7 @@ footer .social__link:nth-of-type(3){
 }
 .form__container{
     width: 420px;
+    height: auto;
     background: transparent;
     border: 2px solid black;
     backdrop-filter: blur(20px);
@@ -377,7 +407,45 @@ footer .social__link:nth-of-type(3){
 .link__register p a:hover{
  text-decoration: underline;
 }
-
+@media (max-width: 600px){
+    .form__container{
+        width: 300px;
+    }
+    .form__container h1{
+        font-size: 20px;
+    }
+    .form__container .input__box{
+        height: 35px;
+        margin: 20px 0;
+    }
+    .input__box input{
+        font-size: 12px;
+        padding: 12px 30px 12px 12px;
+    }
+    .input__box i{
+        right: 15px;
+        top: 50%;
+        margin-top: 18px;
+        padding: 2px;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
+    .form__container .remember__line{
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        margin: -15px 0 15px;
+    }
+    .form__container .form__button{
+        height: 30px;
+        font-size: 12px;
+    }
+    .form__container .link__register{
+        font-size: 12px;
+        text-align: center;
+        margin: 16px 0 12px;
+    }
+}
 
 
 
